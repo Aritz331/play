@@ -11,11 +11,14 @@ function getQV()
        }
        return(false);
 }
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 window.onload = function() {
        //when the document is finished loading, replace everything
        //between the <a ...> </a> tags with the value of splitText
        document.getElementById("a").src='https://stivengiv.github.io/mp3/' + getQV() + '.mp3';
-       await new Promise(r => setTimeout(r, 1000));
+       sleep(1000);
        document.getElementById("b").load();
 } 
 </script>
