@@ -21,6 +21,7 @@ document.getElementById("a").src='https://stivengiv.github.io/mp3/' + getQV() + 
        //sleep(1000);
        //document.getElementById("b").load();
 //} 
+(function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
 </script>
 
 <audio id="b" controls autoplay>
