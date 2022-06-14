@@ -14,13 +14,13 @@ function getQV()
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-window.onload = function() {
+//window.onload = function() {
        //when the document is finished loading, replace everything
        //between the <a ...> </a> tags with the value of splitText
-       document.getElementById("a").src='https://stivengiv.github.io/mp3/' + getQV() + '.mp3';
-       sleep(1000);
-       document.getElementById("b").load();
-} 
+document.getElementById("a").src='https://stivengiv.github.io/mp3/' + getQV() + '.mp3';
+       //sleep(1000);
+document.getElementById("b").load();
+//} 
 </script>
 
 <audio id="b" controls autoplay>
