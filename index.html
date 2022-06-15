@@ -17,7 +17,8 @@ function getSrc() {
 a = document.createElement('audio');
 a.setAttribute("src",getSrc());
 a.setAttribute("autoplay","autoplay");
-a.setAttribute("controls","controls");
+if (pair[1]==="controls" || pair[1]==="c") {
+       a.setAttribute("controls","controls");
 
 window.onload = function() {
        document.body.appendChild(a);
