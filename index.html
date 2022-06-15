@@ -26,8 +26,13 @@ function sleep(ms) {
 function getSrc() {
        return 'https://stivengiv.github.io/mp3/' + getQV() + '.mp3'
 }
+a = document.createElement('audio');
+a.setAttribute("src",getSrc());
+a.setAttribute("autoplay","autoplay");
+a.setAttribute("controls","controls");
 </script>
-
-<audio id="b" controls autoplay>
-  <source id="a" src="javascript:getSrc()" type="audio/mpeg">
+<!--
+<audio controls autoplay>
+  <source src="javascript:getSrc()" type="audio/mpeg">
 </audio>
+-->
