@@ -6,7 +6,7 @@ function getQV()
        var vars = query.split("&");
        for (var i=0;i<vars.length;i++) {
                var pair = vars[i];
-               var pair = vars[i].split("=");
+               pair = vars[i].split("=");
                return pair[0];
        }
        return(false);
@@ -17,7 +17,7 @@ function getSrc() {
 a = document.createElement('audio');
 a.setAttribute("src",getSrc());
 a.setAttribute("autoplay","autoplay");
-if (pair[1]==="controls" || pair[1]==="c") {
+if (a==="controls" || pair[1]==="c") {
        a.setAttribute("controls","controls");
 }
 window.onload = function() {
