@@ -21,7 +21,7 @@ a.setAttribute('id','playAudio');
 
 b = document.createElement('source');
 b.setAttribute('src',getSrc());
-document.getElementById('playAudio').appendChild(b);
+
        
 if (pair[1]==='controls' || pair[1]==='c') {
        a.setAttribute("controls","controls");
@@ -37,6 +37,7 @@ window.onload = function() {
        document.body.appendChild(a);
        document.body.appendChild(b);
        document.body.appendChild(c);
+       document.getElementById('playAudio').appendChild(b);
        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
        /*if (!isChrome){
               $('#iframeAudio').remove();
