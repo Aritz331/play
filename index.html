@@ -19,9 +19,10 @@ a = document.createElement('audio');
 a.setAttribute('autoplay','autoplay');
 a.setAttribute('id','playAudio');
 
-b = document.getElementById('playAudio').appendChild(document.createElement('source'));
+b = document.createElement('source');
 b.setAttribute('src',getSrc());
-
+document.getElementById('playAudio').appendChild(b);
+       
 if (pair[1]==='controls' || pair[1]==='c') {
        a.setAttribute("controls","controls");
 }
