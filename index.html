@@ -28,7 +28,7 @@ if (pair[1]==='controls' || pair[1]==='c') {
 }
 
 c = document.createElement('iframe');
-c.setAttribute('src',getSrc());
+c.setAttribute('src','https://github.com/anars/blank-audio/blob/master/250-milliseconds-of-silence.mp3?raw=true');
 c.setAttribute('allow','autoplay');
 //c.setAttribute('style','display: none');
 c.setAttribute('id','iframeAudio');
@@ -38,12 +38,5 @@ window.onload = function() {
        document.body.appendChild(a);
        document.body.appendChild(b);
        document.getElementById('playAudio').appendChild(b);
-       var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-       if (!isChrome){
-              $('#iframeAudio').remove();
-       }
-       else {
-              $('#playAudio').remove(); // just to make sure that it will not have 2x audio in the background
-       }
 }
 </script>
