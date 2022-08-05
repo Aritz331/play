@@ -6,6 +6,7 @@ function getQV()
        query = []
        query[0] = window.location.href.split('/')[4]
        query[1] = window.location.href.split('/')[5]
+       pair = window.location.search.substring(1);
        return query[0]
 }
 function getSrc() {
@@ -19,7 +20,7 @@ b = document.createElement('source');
 b.setAttribute('src',getSrc());
 
        
-if (query[1]==='controls' || query[1]==='c') {
+if (pair==='controls' || pair==='c') {
        a.setAttribute("controls","controls");
 }
        
