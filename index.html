@@ -3,12 +3,9 @@
 <script>
 function getQV()
 {
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
-       for (var i=0;i<vars.length;i++) {
-               pair = vars[i];
-               pair = vars[i].split("=");
-               return pair[0];
+       query[0] = window.location.href.split('/')[4]
+       query[1] = window.location.href.split('/')[5]
+       return query[0]
        }
        return(false);
 }
@@ -23,18 +20,11 @@ b = document.createElement('source');
 b.setAttribute('src',getSrc());
 
        
-if (pair[1]==='controls' || pair[1]==='c') {
+if (query[1]==='controls' || query[1]==='c') {
        a.setAttribute("controls","controls");
 }
-
-c = document.createElement('iframe');
-c.setAttribute('src','/mp3/250mss.mp3');
-c.setAttribute('allow','autoplay');
-//c.setAttribute('style','display: none');
-c.setAttribute('id','iframeAudio');
        
 window.onload = function() {
-       document.body.appendChild(c);
        document.body.appendChild(a);
        document.body.appendChild(b);
        document.getElementById('playAudio').appendChild(b);
