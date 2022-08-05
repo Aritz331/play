@@ -6,8 +6,6 @@ function getQV()
        query[0] = window.location.href.split('/')[4]
        query[1] = window.location.href.split('/')[5]
        return query[0]
-       }
-       return(false);
 }
 function getSrc() {
        return 'https://stivengiv.github.io/mp3/' + getQV() + '.mp3'
